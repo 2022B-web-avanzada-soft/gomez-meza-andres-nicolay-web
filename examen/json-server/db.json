@@ -1,0 +1,54 @@
+{
+  "company": [
+    {
+      "name": "Square Enix",
+      "city": "Tokyo",
+      "employees": 312,
+      "website": "squareenix.com",
+      "president": "Yoshinori Kitase",
+      "id": 1
+    },
+    {
+      "name": "Sony Santa Monica",
+      "city": "Santa Monica",
+      "employees": 215,
+      "website": "siesantamonica.com",
+      "president": "Cory Balrog",
+      "id": 2
+    },
+    {
+      "name": "FromSoftware",
+      "city": "Tokyo",
+      "employees": 115,
+      "website": "fromsoftware.com",
+      "president": "Hidetaka Miyazaki",
+      "id": 3
+    }
+  ],
+  "videogame": [
+    {
+      "name": "Final Fantasy 7",
+      "gender": "RPG",
+      "director": "Tetsuya Nomura",
+      "date": "2012-04-23",
+      "isMultiplayer": false,
+      "id": 10
+    },
+    {
+      "name": "God Of War",
+      "gender": "Action",
+      "director": "Cory Barlog",
+      "date": "2012-04-23",
+      "isMultiplayer": false,
+      "id": 20
+    },
+    {
+      "name": "Elden Ring",
+      "gender": "RPG",
+      "director": "Hidetaka Miyazaki",
+      "date": "2012-04-23",
+      "isMultiplayer": true,
+      "id": 30
+    }
+  ]
+}
