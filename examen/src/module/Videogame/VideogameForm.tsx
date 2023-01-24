@@ -11,6 +11,7 @@ import {
 } from "./VideogameSlice";
 import { useParams } from "react-router-dom";
 import {toastError} from "../../components/ToastifyConfig";
+import {getVideogameListApi} from "./VideogameService";
 
 interface IProps {
     isEditForm?: boolean;
@@ -22,7 +23,8 @@ const VideogameForm = (props: IProps) => {
     const [gender, setGender] = useState("");
     const [director, setDirector] = useState("");
     const [date, setDate] = useState("");
-    const [isMultiplayer, setIsMultiplayer] = useState(false);
+    const [isMultiplayer, setIsMultiplayer] = useState({} as boolean);
+    const [company, setCompany] = useState("");
 
     const params = useParams();
     const videogameIdToEdit = useRef(parseInt(params.id || ""));
@@ -39,6 +41,7 @@ const VideogameForm = (props: IProps) => {
                 setDirector(videogameData[0].director);
                 setDate(videogameData[0].date);
                 setIsMultiplayer(videogameData[0].isMultiplayer);
+                setCompany(videogameData[0].company);
             }
         }
     }, [isEditForm]);
@@ -51,9 +54,9 @@ const VideogameForm = (props: IProps) => {
     const onSubmitForm = (e: React.FormEvent) => {
         e.preventDefault();
 
-        const data: IVideogameForm = { name, gender, director, date, isMultiplayer };
+        const data: IVideogameForm = { name, gender, director, date, isMultiplayer, company };
 
-        if (name && gender && director && date && isMultiplayer) {
+        if (name && gender && director && date && company) {
             if (isEditForm) {
                 const dirtyFormData: IUpdateVideogameActionProps = {
                     id: videogameIdToEdit.current,
@@ -61,7 +64,7 @@ const VideogameForm = (props: IProps) => {
                 };
                 dispatch(updateVideogameAction(dirtyFormData));
             } else {
-                const data: IVideogameForm = { name, gender, director, date, isMultiplayer };
+                const data: IVideogameForm = { name, gender, director, date, isMultiplayer, company };
                 dispatch(createVideogameAction(data));
             }
         } else {
@@ -75,7 +78,8 @@ const VideogameForm = (props: IProps) => {
             setGender("");
             setDirector("");
             setDate("");
-            setIsMultiplayer(false);
+            setIsMultiplayer({} as boolean);
+            setCompany("");
             dispatch(resetCreateListStatus());
         }
     }, [createVideogameFormStatus]);
@@ -113,16 +117,23 @@ const VideogameForm = (props: IProps) => {
                     }}
                 />
 
-                <input type="radio" id="true" name="isMultiplayer" value="true"
-                       onChange={(e: ChangeEvent<HTMLInputElement>) => {
-                           setIsMultiplayer(true);
-                       }}></input>
-                <label htmlFor="true">True</label>
-                <input type="radio" id="false" name="isMultiplayer" value="false"
-                       onChange={(e: ChangeEvent<HTMLInputElement>) => {
-                           setIsMultiplayer(false);
-                       }}></input>
-                <label htmlFor="false">False</label>
+                <div>
+                    <label>Is Multiplayer : </label>
+                    <input type="radio" id="true" name="isMultiplayer" value="true"
+                           onClick={() => setIsMultiplayer(true)}></input>
+                    <label htmlFor="true">True</label>
+                    <input type="radio" id="false" name="isMultiplayer" value="false"
+                           onClick={() => setIsMultiplayer(false)}></input>
+                    <label htmlFor="false">False</label>
+                </div>
+
+                <Input
+                    label="Company"
+                    value={company}
+                    onChange={(e: ChangeEvent<HTMLInputElement>) => {
+                        setCompany(e.target.value);
+                    }}
+                />
 
                 <div className={Style["btn-wrapper"]}>
                     <input

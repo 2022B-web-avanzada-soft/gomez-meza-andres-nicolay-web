@@ -5,6 +5,7 @@ export interface IVideogame {
     director: string;
     date: string;
     isMultiplayer: boolean;
+    company: string;
 }
 
 export enum ApiStatus {
@@ -27,6 +28,7 @@ export interface IVideogameForm {
     director: string;
     date: string;
     isMultiplayer: boolean;
+    company: string;
 }
 
 export interface IUpdateVideogameActionProps {

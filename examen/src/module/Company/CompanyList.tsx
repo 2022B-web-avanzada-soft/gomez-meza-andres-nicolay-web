@@ -35,36 +35,36 @@ const CompanyList = () => {
                 )}
 
                 {listStatus === ApiStatus.ideal &&
-                    list.map((user: ICompany, index: number) => {
+                    list.map((company: ICompany, index: number) => {
                         return (
                             <tr>
                                 <td>{index + 1}</td>
-                                <td>{user.name}</td>
-                                <td>{user.city}</td>
-                                <td>{user.employees}</td>
-                                <td><a href="#">{user.website}</a></td>
-                                <td>{user.president}</td>
+                                <td>{company.name}</td>
+                                <td>{company.city}</td>
+                                <td>{company.employees}</td>
+                                <td><a href="#">{company.website}</a></td>
+                                <td>{company.president}</td>
                                 <td>
                                     <div>
                                         <input
                                             type="button"
                                             value="View"
                                             onClick={() => {
-                                                setCompanyDataToView(user);
+                                                setCompanyDataToView(company);
                                             }}
                                         />
                                         <input
                                             type="button"
                                             value="Edit"
                                             onClick={() => {
-                                                navigator(`/editCompany/${user.id}`);
+                                                navigator(`/editCompany/${company.id}`);
                                             }}
                                         />
                                         <input
                                             type="button"
                                             value="Delete"
                                             onClick={() => {
-                                                dispatch(deleteCompanyAction(user.id));
+                                                dispatch(deleteCompanyAction(company.id));
                                             }}
                                         />
                                     </div>

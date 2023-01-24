@@ -27,6 +27,7 @@ const VideogameList = () => {
                     <th>Director</th>
                     <th>Date</th>
                     <th>isMultiplayer</th>
+                    <th>Company</th>
                     <th>Action</th>
                 </tr>
                 {listStatus === ApiStatus.loading && <tbody>List is loading</tbody>}
@@ -44,6 +45,7 @@ const VideogameList = () => {
                                 <td>{videogame.director}</td>
                                 <td>{videogame.date}</td>
                                 <td>{videogame.isMultiplayer? "Verdadero":"Falso"}</td>
+                                <td>{videogame.company}</td>
                                 <td>
                                     <div>
                                         <input
@@ -95,6 +97,9 @@ const VideogameList = () => {
                         </div>
                         <div>
                             <label> isMultiplayer : {videogameDataToView.isMultiplayer? "Verdadero":"Falso"}</label>
+                        </div>
+                        <div>
+                            <label> Company : {videogameDataToView.company}</label>
                         </div>
                     </div>
                 </Modal>
