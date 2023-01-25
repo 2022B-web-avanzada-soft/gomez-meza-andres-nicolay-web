@@ -2,10 +2,10 @@
   "company": [
     {
       "name": "Square Enix",
-      "city": "Tokyo",
-      "employees": 312,
+      "city": "Kioto",
+      "employees": 120,
       "website": "squareenix.com",
-      "president": "Yoshinori Kitase",
+      "president": "Hiroyuki Ito",
       "id": 1
     },
     {
