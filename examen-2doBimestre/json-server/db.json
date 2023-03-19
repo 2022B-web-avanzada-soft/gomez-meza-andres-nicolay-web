@@ -1,0 +1,57 @@
+{
+  "company": [
+    {
+      "name": "Square Enix",
+      "city": "Kioto",
+      "employees": 120,
+      "website": "squareenix.com",
+      "president": "Hiroyuki Ito",
+      "id": 1
+    },
+    {
+      "name": "Sony Santa Monica",
+      "city": "Santa Monica",
+      "employees": 215,
+      "website": "siesantamonica.com",
+      "president": "Cory Balrog",
+      "id": 2
+    },
+    {
+      "name": "FromSoftware",
+      "city": "Tokyo",
+      "employees": 115,
+      "website": "fromsoftware.com",
+      "president": "Hidetaka Miyazaki",
+      "id": 3
+    }
+  ],
+  "videogame": [
+    {
+      "name": "Final Fantasy 7",
+      "gender": "RPG",
+      "director": "Tetsuya Nomura",
+      "date": "2023-01-05T21:19",
+      "isMultiplayer": false,
+      "company": "Square Enix",
+      "id": 10
+    },
+    {
+      "name": "God Of War",
+      "gender": "Action",
+      "director": "Cory Barlog",
+      "date": "2023-01-11T21:19",
+      "isMultiplayer": false,
+      "company": "Santa Monica",
+      "id": 20
+    },
+    {
+      "name": "Elden Ring",
+      "gender": "RPG",
+      "director": "Hidetaka Miyazaki",
+      "date": "2023-01-03T21:20",
+      "isMultiplayer": true,
+      "company": "FromSoftware",
+      "id": 30
+    }
+  ]
+}

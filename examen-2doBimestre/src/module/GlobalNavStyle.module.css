@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    justify-content: center;
+    padding:10px 15px;
+    border:1px solid #ff0064;
+    border-radius:5px;
+    background-color:#ff0064;
+
+    box-shadow:1px 1px 1px #000;
+
+    margin: 0;
+}
+
+.container a{
+    color:#fff;
+    text-decoration:none;
+    text-transform:uppercase;
+    text-align:center;
+}
+
+a {
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.active {
+    box-shadow:2px 2px 1px #000;
+}
+
+.container:hover {
+    cursor:pointer;
+}

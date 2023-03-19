@@ -1,0 +1,20 @@
+.header {
+    height: 70px;
+    background-color: indianred;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    margin: 0;
+}
+
+.content-section {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 20px;
+}
+
+.main-content {
+    margin-top: 20px;
+}
