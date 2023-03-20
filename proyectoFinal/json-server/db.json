@@ -1,0 +1,10 @@
+{
+  "reviews": [
+    {"id": 1,
+    "calification": 4.5,
+    "comment": "Este es un mal juego"},
+    {"id": 2,
+      "calification": 9.8,
+      "comment": "Este es un buen juego"}
+  ]
+}
